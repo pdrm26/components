@@ -17,9 +17,14 @@
         width: 100vw;
         height: 100vh;
       }
-      section {
-      }
 
+      section#login-wrapper {
+        background-color: aliceblue;
+        border-radius: 5px;
+        border: 1px solid #efefef;
+        box-shadow: -2px 0px 2px 0px #c0c0c0;
+        padding: 10px 20px;
+      }
       .input-row {
         display: flex;
         position: relative;
@@ -29,9 +34,34 @@
 
       .input-row > input {
         border: 0;
-        border-bottom: 1px solid #4b4b4b;
         outline: none;
         transition: all 0.5s ease;
+        border-bottom: 1px solid #757575;
+        background-color: transparent;
+      }
+
+      .input-row > label {
+        color: #757575;
+      }
+
+      .input-row > span::after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background-color: #ed2553;
+        bottom: 13px;
+        left: 0;
+        transform: scale(0);
+        transition: 0.3s all ease-out;
+      }
+
+      .input-row input:focus ~ span::after {
+        transform: scale(1);
+      }
+
+      .input-row input:focus {
+        border-bottom: 0;
       }
 
       .input-row > label {
@@ -41,38 +71,34 @@
         font-size: 0.7rem;
       }
 
-      .input-row > input:focus {
-        border-bottom: 1px solid #d80000;
-      }
-
       .input-row > input:focus-within + label {
-        color: #d80000;
+        color: #ed2553;
         top: -35px;
         font-size: 0.5rem;
       }
     </style>
   </head>
   <body>
-    <section>
-      <!-- <h2>Enter</h2> -->
+    <section id="login-wrapper">
+      <h2>Enter</h2>
       <div id="input-rows">
         <div class="input-row">
-          <input type="text" name="username" id="username" />
+          <input type="text" name="username" id="username" autocomplete="off" />
           <label for="username" class="input-label">Username</label>
+          <span class="mark-on-focus"></span>
         </div>
         <div class="input-row">
           <input type="password" name="password" id="password" />
           <label for="password" class="input-label">Password</label>
+          <span class="mark-on-focus"></span>
         </div>
       </div>
-      <!-- <div>
-            <button>
-                Lets go
-            </button>
-        </div>
-        <div>
-            <a href="">Forget your password?</a>
-        </div> -->
+      <div>
+        <button>Lets go</button>
+      </div>
+      <div>
+        <a href="">Forget your password?</a>
+      </div>
     </section>
   </body>
 </html>
