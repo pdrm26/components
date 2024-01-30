@@ -25,10 +25,9 @@
         box-shadow: -1px 0px 2px 0px #c0c0c0;
         padding: 10px 20px;
       }
+
       .input-row {
-        display: flex;
         position: relative;
-        flex-direction: column;
         margin: 40px 0;
       }
 
@@ -36,44 +35,53 @@
         border: 0;
         outline: none;
         transition: all 0.5s ease;
-        border-bottom: 1px solid #757575;
         background-color: transparent;
+      }
+
+      .input-row > span.bar {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: #757575;
+        width: 100%;
+        height: 1px;
+      }
+
+      .input-row > span.bar::after,
+      .input-row > span.bar::before {
+        content: "";
+        position: absolute;
+        background-color: #ed2553;
+        width: 0%;
+        height: 1px;
+        transition: all 0.3s ease;
+      }
+
+      .input-row > span.bar::before {
+        left: 50%;
+      }
+
+      .input-row > span.bar::after {
+        right: 50%;
+      }
+
+      .input-row input:focus ~ span.bar::before,
+      .input-row input:focus ~ span.bar::after {
+        width: 50%;
       }
 
       .input-row > label {
         color: #757575;
-      }
-
-      .input-row > span::after {
-        content: "";
         position: absolute;
-        width: 100%;
-        height: 1px;
-        background-color: #ed2553;
-        bottom: 13px;
+        top: -10px;
         left: 0;
-        transform: scale(0);
-        transition: 0.3s all ease-out;
-      }
-
-      .input-row input:focus ~ span::after {
-        transform: scale(1);
-      }
-
-      .input-row input:focus {
-        border-bottom: 0;
-      }
-
-      .input-row > label {
-        position: relative;
-        top: -30px;
         transition: all 0.3s ease;
         font-size: 0.7rem;
       }
 
       .input-row > input:focus-within + label {
         color: #9d9d9d;
-        top: -35px;
+        top: -13px;
         font-size: 0.5rem;
       }
     </style>
@@ -85,12 +93,12 @@
         <div class="input-row">
           <input type="text" name="username" id="username" autocomplete="off" />
           <label for="username" class="input-label">Username</label>
-          <span class="mark-on-focus"></span>
+          <span class="bar"></span>
         </div>
         <div class="input-row">
           <input type="password" name="password" id="password" />
           <label for="password" class="input-label">Password</label>
-          <span class="mark-on-focus"></span>
+          <span class="bar"></span>
         </div>
       </div>
       <div>
