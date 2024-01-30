@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login page</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+      }
+      section {
+      }
+
+      .input-row {
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        margin: 40px 0;
+      }
+
+      .input-row > input {
+        border: 0;
+        border-bottom: 1px solid #4b4b4b;
+        outline: none;
+        transition: all 0.5s ease;
+      }
+
+      .input-row > label {
+        position: relative;
+        top: -30px;
+        transition: all 0.3s ease;
+        font-size: 0.7rem;
+      }
+
+      .input-row > input:focus {
+        border-bottom: 1px solid #d80000;
+      }
+
+      .input-row > input:focus-within + label {
+        color: #d80000;
+        top: -35px;
+        font-size: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <!-- <h2>Enter</h2> -->
+      <div id="input-rows">
+        <div class="input-row">
+          <input type="text" name="username" id="username" />
+          <label for="username" class="input-label">Username</label>
+        </div>
+        <div class="input-row">
+          <input type="password" name="password" id="password" />
+          <label for="password" class="input-label">Password</label>
+        </div>
+      </div>
+      <!-- <div>
+            <button>
+                Lets go
+            </button>
+        </div>
+        <div>
+            <a href="">Forget your password?</a>
+        </div> -->
+    </section>
+  </body>
+</html>
