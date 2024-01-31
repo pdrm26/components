@@ -11,14 +11,18 @@
       }
 
       body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 100vw;
         height: 100vh;
       }
 
-      form#card {
+      #cards .card {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      form.card {
         background-color: #fff;
         border-radius: 5px;
         border: 1px solid #efefef;
@@ -30,7 +34,7 @@
         flex-direction: column;
       }
 
-      form#card h2 {
+      form.card h2 {
         align-self: flex-start;
       }
 
@@ -124,26 +128,71 @@
     </style>
   </head>
   <body>
-    <form id="card">
-      <h2>Sign in</h2>
-      <div id="input-rows">
-        <div class="input-row">
-          <input type="text" name="username" id="username" autocomplete="off" />
-          <label for="username" class="input-label">Username</label>
-          <span class="bar"></span>
+    <section id="cards">
+      <form class="card" id="signin-card">
+        <h2>Sign in</h2>
+        <div id="input-rows">
+          <div class="input-row">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              autocomplete="off"
+            />
+            <label for="username" class="input-label">Username</label>
+            <span class="bar"></span>
+          </div>
+          <div class="input-row">
+            <input type="password" name="password" id="password" />
+            <label for="password" class="input-label">Password</label>
+            <span class="bar"></span>
+          </div>
         </div>
-        <div class="input-row">
-          <input type="password" name="password" id="password" />
-          <label for="password" class="input-label">Password</label>
-          <span class="bar"></span>
+        <div>
+          <button type="submit">Lets go</button>
         </div>
-      </div>
-      <div>
-        <button type="submit">Lets go</button>
-      </div>
-      <div>
-        <a href="" id="password-recovery">Forget your password?</a>
-      </div>
-    </form>
+        <div>
+          <a href="" id="password-recovery">Forget your password?</a>
+        </div>
+      </form>
+
+      <form class="card" id="signup-card">
+        <h2>Sign up</h2>
+        <div id="input-rows">
+          <div class="input-row">
+            <input
+              type="text"
+              name="username"
+              id="username"
+              autocomplete="off"
+            />
+            <label for="username" class="input-label">Username</label>
+            <span class="bar"></span>
+          </div>
+          <div class="input-row">
+            <input type="password" name="password" id="password" />
+            <label for="password" class="input-label">Password</label>
+            <span class="bar"></span>
+          </div>
+          <div class="input-row">
+            <input
+              type="password"
+              name="re-enter password"
+              id="re-enter password"
+            />
+            <label for="re-enter password" class="input-label"
+              >re-enter Password</label
+            >
+            <span class="bar"></span>
+          </div>
+        </div>
+        <div>
+          <button type="submit">Lets go</button>
+        </div>
+        <div>
+          <a href="" id="password-recovery">Forget your password?</a>
+        </div>
+      </form>
+    </section>
   </body>
 </html>
