@@ -30,6 +30,10 @@
         flex-direction: column;
       }
 
+      form#card h2 {
+        align-self: flex-start;
+      }
+
       .input-row {
         position: relative;
         margin-top: 40px;
@@ -95,7 +99,7 @@
         border: 1px solid #9d9d9d;
         color: #9d9d9d;
         background-color: white;
-        margin-top: 30px;
+        margin-top: 25px;
         transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
       }
 
@@ -103,6 +107,19 @@
         border: 1px solid #ed2553;
         color: #ed2553;
         cursor: pointer;
+      }
+
+      a#password-recovery {
+        text-decoration: none;
+        color: #757575;
+        font-size: 0.5rem;
+        margin-top: 10px;
+        display: block;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      }
+
+      a#password-recovery:hover {
+        color: black;
       }
     </style>
   </head>
@@ -125,7 +142,7 @@
         <button type="submit">Lets go</button>
       </div>
       <div>
-        <a href="">Forget your password?</a>
+        <a href="" id="password-recovery">Forget your password?</a>
       </div>
     </form>
   </body>
