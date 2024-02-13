@@ -136,3 +136,63 @@ a#password-recovery:hover,
 a#signin:hover {
   color: black;
 }
+
+.card.alt {
+  position: absolute;
+  top: 20px;
+  left: 330px;
+  width: 140px;
+  height: 140px;
+  background: none;
+  box-shadow: none;
+  border-radius: 100%;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.card.alt #toggle {
+  position: relative;
+  background-color: #ed2553;
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: white;
+  font-size: 5rem;
+  line-height: 130px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.card.alt #toggle::after {
+  content: "\270E";
+}
+
+/* .card.alt .title,
+.card.alt .input-row,
+.card.alt button,
+.card.alt a {
+  left: 100px;
+  opacity: 0;
+  visibility: hidden;
+} */
+
+.card.alt .title {
+  color: white;
+  border-color: white;
+  position: relative;
+}
+
+.card.alt #close::before {
+  content: "\2716";
+  color: #fff;
+}
+
+.card.alt #close {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 60px;
+  display: inline;
+  font-size: 58px;
+}
