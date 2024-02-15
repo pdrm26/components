@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  background-color: #688bfc;
+  border-radius: 5px;
+  padding: 20px 30px;
+}
+
+h2 {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  color: rgb(0, 41, 175);
+  width: fit-content;
+  padding: 5px 10px;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#first-row {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px 0;
+}
+
+#second-row {
+  margin-bottom: 40px;
+}
+
+#first-row .input-container {
+  width: 50% !important;
+}
+
+#first-row .input-container:nth-child(2) {
+  margin-left: 20px;
+}
+
+div.input-container {
+  position: relative;
+}
+
+input {
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid #c7c7c7;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+input::placeholder {
+  color: transparent;
+}
+
+label {
+  color: white;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-bottom: 1px solid #fff;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+  top: -20px;
+}
+
+div#submit-wrapper {
+  width: 100%;
+  text-align: end;
+}
+
+div button[type="submit"] {
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #efefef;
+  background-color: #0d00463f;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+div button[type="submit"]:hover {
+  background-color: #0d0046;
+}
