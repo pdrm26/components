@@ -17,17 +17,30 @@
               type="text"
               name="username"
               id="username"
+              placeholder="if empty will not work"
               autocomplete="off"
             />
             <label for="username" class="input-label">Username</label>
             <span class="bar"></span>
           </div>
           <div class="input-row">
-            <input type="password" name="password" id="password" />
-            <label for="password" class="input-label">Password</label>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="if empty will not work"
+            />
+            <label
+              for="password"
+              class="input-label"
+              placeholder="if empty will not work"
+              >Password</label
+            >
             <span class="bar"></span>
           </div>
-          <button type="submit">Lets go</button>
+          <div id="submit-wrapper">
+            <button type="submit">Lets go</button>
+          </div>
         </form>
         <a href="" id="password-recovery">Forget your password?</a>
       </div>
@@ -42,12 +55,18 @@
               name="username"
               id="username"
               autocomplete="off"
+              placeholder="if empty will not work"
             />
             <label for="username" class="input-label">Username</label>
             <span class="bar"></span>
           </div>
           <div class="input-row">
-            <input type="password" name="password" id="password" />
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="if empty will not work"
+            />
             <label for="password" class="input-label">Password</label>
             <span class="bar"></span>
           </div>
@@ -56,16 +75,30 @@
               type="reenter-password"
               name="reenter-password"
               id="reenter-password"
+              placeholder="if empty will not work"
             />
             <label for="reenter-password" class="input-label"
               >Re-Enter Password</label
             >
             <span class="bar"></span>
           </div>
-          <button type="submit">Submit</button>
+          <div id="submit-wrapper">
+            <button type="submit">Submit</button>
+          </div>
         </form>
-        <a href="" id="signin">Already a member? <span>Log in</span></a>
       </div>
     </section>
+    <script>
+      const toggle = document.querySelector("#toggle");
+      const closeIcon = document.querySelector("#close");
+      const cardsContainer = document.querySelector("#cards-container");
+      const signupCard = document.querySelector(".card.alt");
+      toggle.addEventListener("click", (e) => {
+        cardsContainer.classList.add("active");
+      });
+      closeIcon.addEventListener("click", (e) => {
+        cardsContainer.classList.remove("active");
+      });
+    </script>
   </body>
 </html>
