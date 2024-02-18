@@ -11,14 +11,16 @@
         <img src="./icons8-search-32.svg" alt="" srcset="" />
       </div>
       <span id="close"></span>
-      <input type="text" id="input" placeholder="Search..." />
+      <input type="text" id="search-input" placeholder="Search..." autofocus />
     </div>
     <script>
       const container = document.querySelector("#container");
       const search = document.querySelector("#search");
+      const searchInput = document.querySelector("#search-input");
       const close = document.querySelector("#close");
       search.addEventListener("click", () => {
         container.classList.add("active");
+        searchInput.focus();
       });
       close.addEventListener("click", () => {
         container.classList.remove("active");

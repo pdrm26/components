@@ -41,12 +41,12 @@ body {
 input[type="text"] {
   position: absolute;
   top: 400px;
+  left: 10px;
   width: 100%;
   outline: none;
   border: none;
   background-color: transparent;
   font-size: 3rem;
-  left: 5px;
   visibility: hidden;
 }
 
@@ -56,8 +56,6 @@ input[type="text"] {
 
 #container.active input[type="text"],
 #container.active #close {
-  transition: all 0.5s ease;
-  transition-delay: 0.3s;
   visibility: visible;
 }
 
