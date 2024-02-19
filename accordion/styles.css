@@ -46,7 +46,7 @@ body {
 .item > p.text {
   padding: 0;
   color: blue;
-  background-color: #efefef;
+  background-color: #fff;
   transition: all 0.3s ease-in-out;
   height: 0;
   overflow: hidden;
@@ -55,4 +55,9 @@ body {
 .item > p.text.active {
   height: fit-content;
   padding: 5px 10px;
+}
+
+section {
+  overflow: hidden;
+  border-radius: 3px;
 }
