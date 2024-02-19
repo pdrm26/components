@@ -7,28 +7,62 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="item">
-      <div class="title">
-        <p>title</p>
-        <span></span>
+    <section>
+      <div class="item">
+        <div class="title">
+          <p>title 1</p>
+          <span></span>
+        </div>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis unde
+          eveniet voluptatum corporis nam non eligendi assumenda tempore dolor a
+          id perferendis aliquam inventore porro iusto, nesciunt tempora debitis
+          cum.
+        </p>
       </div>
-      <p class="text">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis unde
-        eveniet voluptatum corporis nam non eligendi assumenda tempore dolor a
-        id perferendis aliquam inventore porro iusto, nesciunt tempora debitis
-        cum.
-      </p>
-    </div>
+      <div class="item">
+        <div class="title">
+          <p>title 2</p>
+          <span></span>
+        </div>
+        <p class="text">
+          Lobbbbbbbbbbbbb bbbbbbbbbb bbbbbbbbb bsciunt tempora debitis cum.
+        </p>
+      </div>
+      <div class="item">
+        <div class="title">
+          <p>title 3</p>
+          <span></span>
+        </div>
+        <p class="text">
+          Lorem ip29135890128509182508125sum dolor sit amet consectetur
+          adipisicing elit. Facilis unde eveniet r a id perferendis aliquam
+          inventore porro iusto, nesciunt tempora debitis cum.
+        </p>
+      </div>
+      <div class="item">
+        <div class="title">
+          <p>title 4</p>
+          <span></span>
+        </div>
+        <p class="text">
+          aaaaaaaaaaa aaaaaaaaaa aaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaa tempora
+          debitis cum.
+        </p>
+      </div>
+    </section>
+
     <script>
-      const titleSection = document.querySelector("div.title");
-      const titleIconSection = document.querySelector("div.title > span");
-      const textSection = document.querySelector("p.text");
-      titleSection.addEventListener("click", () => {
+      const section = document.querySelector("section");
+      section.addEventListener("click", (event) => {
+        const itemElem = event.target.closest(".item");
+        const textSection = itemElem.querySelector("p.text");
+        const titleIcon = itemElem.querySelector("div.title > span");
         if (textSection.classList.contains("active")) {
           textSection.classList.remove("active");
-          titleIconSection.classList.remove("active");
+          titleIcon.classList.remove("active");
         } else {
-          titleIconSection.classList.add("active");
+          titleIcon.classList.add("active");
           textSection.classList.add("active");
         }
       });
