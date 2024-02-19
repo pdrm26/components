@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="item">
+      <div class="title">
+        <p>title</p>
+        <span></span>
+      </div>
+      <p class="text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis unde
+        eveniet voluptatum corporis nam non eligendi assumenda tempore dolor a
+        id perferendis aliquam inventore porro iusto, nesciunt tempora debitis
+        cum.
+      </p>
+    </div>
+    <script>
+      const titleSection = document.querySelector("div.title");
+      const titleIconSection = document.querySelector("div.title > span");
+      const textSection = document.querySelector("p.text");
+      titleSection.addEventListener("click", () => {
+        if (textSection.classList.contains("active")) {
+          textSection.classList.remove("active");
+          titleIconSection.classList.remove("active");
+        } else {
+          titleIconSection.classList.add("active");
+          textSection.classList.add("active");
+        }
+      });
+    </script>
+  </body>
+</html>

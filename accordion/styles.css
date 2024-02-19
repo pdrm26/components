@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.item {
+  background-color: #000;
+  max-width: 500px;
+  border-radius: 4px;
+}
+
+.item > div.title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item > div.title {
+  padding: 5px 10px;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.item > div.title > span {
+  transition: all 0.5s ease;
+}
+
+.item > div.title > span.active {
+  transform: rotateX(180deg);
+}
+
+.item > div.title > span::before {
+  content: "\02C5";
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+.item > p.text {
+  padding: 0;
+  color: blue;
+  background-color: #efefef;
+  transition: all 0.3s ease-in-out;
+  height: 0;
+  overflow: hidden;
+}
+
+.item > p.text.active {
+  height: fit-content;
+  padding: 5px 10px;
+}
