@@ -37,7 +37,7 @@ section {
 #background {
   position: absolute;
   bottom: 0;
-  animation: show 8s linear infinite;
+  animation: show 5s linear infinite;
 }
 
 .rock {
