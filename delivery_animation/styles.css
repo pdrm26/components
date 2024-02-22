@@ -37,9 +37,7 @@ section {
 #background {
   position: absolute;
   bottom: 0;
-
-  animation: show 8s linear;
-  animation-iteration-count: infinite;
+  animation: show 8s linear infinite;
 }
 
 .rock {
@@ -122,8 +120,7 @@ section {
   height: 120px;
   position: absolute;
   bottom: -36px;
-  animation: move 5s linear;
-  animation-iteration-count: infinite;
+  animation: move 5s linear infinite;
 }
 
 #land {
