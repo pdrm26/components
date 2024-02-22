@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #efefef;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section {
+  position: relative;
+  overflow: hidden;
+  width: 600px;
+  height: 400px;
+  max-width: 700px;
+  max-height: 500px;
+  background-color: rgb(245, 196, 151) !important;
+}
+
+.rock {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: gray;
+}
+
+.rock__1 {
+  bottom: -50px;
+  left: 100px;
+  transform: rotate(40deg);
+}
+
+.rock__2 {
+  bottom: -60px;
+  left: 170px;
+  transform: rotate(40deg);
+}
+
+.rock__3 {
+  bottom: -80px;
+  left: 230px;
+  transform: rotate(40deg) scale(0.9);
+}
+
+.rock__4 {
+  bottom: -80px;
+  left: 360px;
+  border-radius: 30%;
+  transform: rotate(40deg);
+}
+
+.rock__5 {
+  bottom: -50px;
+  left: 500px;
+  transform: rotate(45deg) scale(0.6);
+}
+
+.tree {
+  position: absolute;
+  width: 30px;
+  height: 40px;
+}
+
+.tree__1 {
+  bottom: 0;
+  background: no-repeat center/130% url("./tree-5202.svg");
+  left: 10px;
+}
+
+.tree__2 {
+  bottom: -7px;
+  background: no-repeat center/71% url("./tree-5202.svg");
+  left: 327px;
+}
+
+.tree__3 {
+  background: no-repeat center/100% url("./tree-5202.svg");
+  bottom: -3px;
+  left: 480px;
+}
+
+#land {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 2px;
+}
