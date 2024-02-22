@@ -90,6 +90,15 @@ section {
   left: 480px;
 }
 
+#truck {
+  background: no-repeat center/100% url("./delivery-truck-svgrepo-com.svg");
+  width: 80px;
+  height: 120px;
+  position: absolute;
+  bottom: -36px;
+  left: 40px;
+}
+
 #land {
   position: absolute;
   bottom: 0;
