@@ -19,14 +19,20 @@ section {
   height: 400px;
   max-width: 700px;
   max-height: 500px;
-  background-color: rgb(245, 196, 151) !important;
+  background-color: rgb(160, 228, 255) !important;
+}
+
+#background {
+  position: absolute;
+  bottom: 0;
+  left: 0px;
 }
 
 .rock {
   position: absolute;
   width: 100px;
   height: 100px;
-  background-color: gray;
+  background-color: rgb(43, 43, 43);
 }
 
 .rock__1 {
