@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section>
+      <img id="main" src="./imgs/free-nature-images.jpg" alt="" />
+      <div id="non-active-wrapper-images">
+        <img src="./imgs/nature-animal.webp" alt="" />
+        <img src="./imgs/river.jpg" alt="" />
+        <img src="./imgs/mountain.jpg" alt="" />
+        <img src="./imgs/free-nature-images.jpg" alt="" />
+      </div>
+    </section>
+    <script>
+      const mainImage = document.querySelector("img#main");
+      const nonActiveWrapperImages = document.querySelector(
+        "#non-active-wrapper-images"
+      );
+      nonActiveWrapperImages.addEventListener("click", (e) => {
+        console.log(e);
+        if (e.target.nodeName === "IMG") {
+          mainImage.src = e.target.src;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+section {
+  width: 700px;
+  box-shadow: 4px -3px 18px 0px gray;
+}
+
+#non-active-wrapper-images {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#non-active-wrapper-images img {
+  border: 1px solid #efefef;
+  box-shadow: 4px -3px 18px 0px gray;
+  width: 150px;
+  height: 100px;
+  margin-top: 20px;
+  cursor: pointer;
+}
