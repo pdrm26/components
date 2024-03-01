@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <ul id="page-selector">
+      <li>
+        <input type="radio" name="mark-page" id="home" />
+        <label for="home">Home</label>
+      </li>
+      <li>
+        <input type="radio" name="mark-page" id="projects" />
+        <label for="projects">Projects</label>
+      </li>
+      <li>
+        <input type="radio" name="mark-page" id="about" />
+        <label for="about">About</label>
+      </li>
+      <li>
+        <input type="radio" name="mark-page" id="support" />
+        <label for="support">Support</label>
+      </li>
+    </ul>
+    <section id="page-wrapper">
+      <section class="page" id="home">home-page</section>
+      <section class="page" id="projects">projects-page</section>
+      <section class="page" id="about">about-page</section>
+      <section class="page" id="support">support-page</section>
+    </section>
+    <script>
+      const pageWrapper = document.querySelector("#page-wrapper");
+      const pageSelector = document.querySelector("ul#page-selector");
+
+      pageSelector.addEventListener("click", (e) => {
+        if (e.target.nodeName !== "LABEL" && e.target.nodeName !== "INPUT") return;
+        let pageNumber;
+        switch (e.target.id) {
+          case "home":
+            pageNumber = 0;
+            break;
+          case "projects":
+            pageNumber = 1;
+            break;
+          case "about":
+            pageNumber = 2;
+            break;
+          case "support":
+            pageNumber = 3;
+            break;
+          default:
+            pageNumber = 0;
+        }
+        pageWrapper.style.transform = `translateY(-${pageNumber * 100}%)`;
+      });
+    </script>
+  </body>
+</html>
