@@ -29,7 +29,8 @@ form#container {
 .input input {
   border: 1px solid #efefef;
   outline: none;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  padding: 5px;
 }
 
 button#add-input {
