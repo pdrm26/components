@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <form id="container">
+      <div id="inputs">
+        <div class="input">
+          <label>Address 1:</label>
+          <input type="text" />
+        </div>
+      </div>
+      <button id="add-input">Add</button>
+    </form>
+    <script>
+      const formContainerInputs = document.querySelector("#container #inputs");
+      const addBtn = document.querySelector("#add-input");
+
+      addBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        formContainerInputs.lastElementChild.insertAdjacentHTML(
+          "afterend",
+          `<div class="input">
+            <label>Address ${formContainerInputs.childElementCount + 1}: </label>
+            <input type="text" />
+          </div>
+          `
+        );
+      });
+    </script>
+  </body>
+</html>
