@@ -10,14 +10,24 @@
       <div id="inputs">
         <div class="input">
           <label>Address 1:</label>
-          <input type="text" />
+          <input type="text" name="address" />
         </div>
       </div>
-      <button id="add-input">Add</button>
+      <div id="form-controllers">
+        <button id="add-input">Add</button>
+        <button type="submit">Submit</button>
+      </div>
     </form>
     <script>
+      const infoForm = document.querySelector("form#container");
       const formContainerInputs = document.querySelector("#container #inputs");
-      const addBtn = document.querySelector("#add-input");
+      const addBtn = document.querySelector("#form-controllers #add-input");
+
+      infoForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const formInfoData = new FormData(infoForm);
+        console.log(formInfoData.getAll("address"));
+      });
 
       addBtn.addEventListener("click", (e) => {
         e.preventDefault();
@@ -25,7 +35,7 @@
           "afterend",
           `<div class="input">
             <label>Address ${formContainerInputs.childElementCount + 1}: </label>
-            <input type="text" />
+            <input type="text"  name="address"/>
           </div>
           `
         );

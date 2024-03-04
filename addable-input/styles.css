@@ -33,7 +33,7 @@ form#container {
   padding: 5px;
 }
 
-button#add-input {
+#form-controllers button {
   font-size: 1.2rem;
   border: 1px solid #efefef;
   padding: 5px 30px;
@@ -42,6 +42,6 @@ button#add-input {
   transition: background-color 0.2s linear;
 }
 
-button#add-input:hover {
+#form-controllers button:hover {
   background-color: #949494;
 }
