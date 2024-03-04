@@ -10,7 +10,7 @@
       <div id="inputs">
         <div class="input">
           <label>Address 1:</label>
-          <input type="text" name="address" />
+          <input type="text" pattern="[A-Za-z]+" name="address" />
         </div>
       </div>
       <div id="form-controllers">
@@ -35,7 +35,7 @@
           "afterend",
           `<div class="input">
             <label>Address ${formContainerInputs.childElementCount + 1}: </label>
-            <input type="text"  name="address"/>
+            <input type="text" pattern="[A-Za-z]+" name="address"/>
           </div>
           `
         );
