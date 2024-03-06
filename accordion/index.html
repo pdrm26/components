@@ -14,10 +14,8 @@
           <span></span>
         </div>
         <p class="text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis unde
-          eveniet voluptatum corporis nam non eligendi assumenda tempore dolor a
-          id perferendis aliquam inventore porro iusto, nesciunt tempora debitis
-          cum.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis unde eveniet voluptatum corporis nam non
+          eligendi assumenda tempore dolor a id perferendis aliquam inventore porro iusto, nesciunt tempora debitis cum.
         </p>
       </div>
       <div class="item">
@@ -25,9 +23,7 @@
           <p>title 2</p>
           <span></span>
         </div>
-        <p class="text">
-          Lobbbbbbbbbbbbb bbbbbbbbbb bbbbbbbbb bsciunt tempora debitis cum.
-        </p>
+        <p class="text">Lobbbbbbbbbbbbb bbbbbbbbbb bbbbbbbbb bsciunt tempora debitis cum.</p>
       </div>
       <div class="item">
         <div class="title">
@@ -35,9 +31,8 @@
           <span></span>
         </div>
         <p class="text">
-          Lorem ip29135890128509182508125sum dolor sit amet consectetur
-          adipisicing elit. Facilis unde eveniet r a id perferendis aliquam
-          inventore porro iusto, nesciunt tempora debitis cum.
+          Lorem ip29135890128509182508125sum dolor sit amet consectetur adipisicing elit. Facilis unde eveniet r a id
+          perferendis aliquam inventore porro iusto, nesciunt tempora debitis cum.
         </p>
       </div>
       <div class="item">
@@ -45,10 +40,7 @@
           <p>title 4</p>
           <span></span>
         </div>
-        <p class="text">
-          aaaaaaaaaaa aaaaaaaaaa aaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaa tempora
-          debitis cum.
-        </p>
+        <p class="text">aaaaaaaaaaa aaaaaaaaaa aaaaaaaaa aaaaaaaaaaaaaaaaaaaaaaaaa tempora debitis cum.</p>
       </div>
     </section>
 
@@ -58,13 +50,8 @@
         const itemElem = event.target.closest(".item");
         const textSection = itemElem.querySelector("p.text");
         const titleIcon = itemElem.querySelector("div.title > span");
-        if (textSection.classList.contains("active")) {
-          textSection.classList.remove("active");
-          titleIcon.classList.remove("active");
-        } else {
-          titleIcon.classList.add("active");
-          textSection.classList.add("active");
-        }
+        textSection.classList.toggle("active");
+        titleIcon.classList.toggle("active");
       });
     </script>
   </body>
