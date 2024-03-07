@@ -1,0 +1,18 @@
+section {
+  border: 1px solid #efefef;
+  display: flex;
+  padding: 3px;
+  width: fit-content;
+}
+
+section img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+section input {
+  border: none;
+  outline: none;
+}
