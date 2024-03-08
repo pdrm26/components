@@ -40,6 +40,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: fill;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
 .card .top-section span.time,
@@ -77,6 +78,7 @@ body {
 
 .card:hover div.top-section img {
   filter: grayscale(100%);
+  transform: scale(1.5);
 }
 .card:hover div.bottom-section {
   height: 60%;
