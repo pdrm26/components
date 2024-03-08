@@ -19,13 +19,15 @@ body {
   overflow: hidden;
   position: relative;
   width: 300px;
+  height: 400px;
 }
 
 .card .top-section {
   max-width: 300px;
-  height: 200px;
+  height: 60%;
   position: relative;
   background-color: rgb(0, 47, 255);
+  transition: height 0.2s ease-in-out;
 }
 
 .card .top-section img {
@@ -56,12 +58,21 @@ body {
 }
 
 .card .bottom-section {
+  height: 40%;
   background-color: white;
   padding: 5px;
   position: relative;
+  transition: height 0.2s ease-in-out;
 }
 
-.card .bottom-section:hover p.description {
+.card:hover div.top-section {
+  height: 40%;
+}
+.card:hover div.bottom-section {
+  height: 60%;
+}
+
+.card:hover div.bottom-section p.description {
   height: auto;
   overflow: visible;
   text-overflow: unset;
