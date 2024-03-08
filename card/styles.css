@@ -68,6 +68,10 @@ body {
 .card:hover div.top-section {
   height: 40%;
 }
+
+.card:hover div.top-section img {
+  filter: grayscale(100%);
+}
 .card:hover div.bottom-section {
   height: 60%;
 }
