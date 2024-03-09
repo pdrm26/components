@@ -7,13 +7,28 @@
   </head>
   <body>
     <section id="slider">
-      <div id="images-wrapper">
-        <img src="./61CiqVTRBEL._SX3000_.jpg" alt="" />
-        <img src="./61zAjw4bqPL._SX3000_.jpg" alt="" />
-        <img src="./71Ie3JXGfVL._SX3000_.jpg" alt="" />
-        <img src="./81KkrQWEHIL._SX3000_.jpg" alt="" />
-      </div>
+      <div id="images"></div>
       <div id="dots"></div>
     </section>
+    <script>
+      const SLIDER_IMAGES = [
+        "./61CiqVTRBEL._SX3000_.jpg",
+        "./61zAjw4bqPL._SX3000_.jpg",
+        "./71Ie3JXGfVL._SX3000_.jpg",
+        "./81KkrQWEHIL._SX3000_.jpg",
+      ];
+
+      // Get the images and dots wrapper
+      const images = document.querySelector("#images");
+      const dots = document.querySelector("#dots");
+
+      // Generate images
+      SLIDER_IMAGES.forEach((image) => images.insertAdjacentHTML("afterbegin", `<img src=${image} />`));
+
+      // Generate images dots
+      for (let i = 0; i < SLIDER_IMAGES.length; i++) {
+        dots.insertAdjacentHTML("beforeend", `<span class="dot" data-slide-num=${i}></span>`);
+      }
+    </script>
   </body>
 </html>
