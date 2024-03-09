@@ -25,10 +25,17 @@
       // Generate images
       SLIDER_IMAGES.forEach((image) => images.insertAdjacentHTML("afterbegin", `<img src=${image} />`));
 
-      // Generate images dots
+      // Generate dots
       for (let i = 0; i < SLIDER_IMAGES.length; i++) {
         dots.insertAdjacentHTML("beforeend", `<span class="dot" data-slide-num=${i}></span>`);
       }
+
+      dots.addEventListener("click", (e) => {
+        if (e.target.nodeName !== "SPAN") return;
+
+        const slideNumber = e.target.dataset.slideNum;
+        images.style.transform = `translateX(-${slideNumber * 100}%)`;
+      });
     </script>
   </body>
 </html>
