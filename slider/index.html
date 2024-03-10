@@ -27,7 +27,13 @@
 
       // Generate dots
       for (let i = 0; i < SLIDER_IMAGES.length; i++) {
-        dots.insertAdjacentHTML("beforeend", `<input type="radio" name="dot" class="dot" data-slide-num=${i}></input>`);
+        dots.insertAdjacentHTML(
+          "beforeend",
+          `
+          <input type="radio" name="dot" id="dot${i}" data-slide-num=${i} hidden>
+          <label for="dot${i}" class="dot"></label>
+          `
+        );
       }
 
       dots.addEventListener("click", (e) => {

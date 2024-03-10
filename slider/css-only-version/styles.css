@@ -49,6 +49,6 @@ body {
   transition: background 0.3s ease-in-out;
 }
 
-#slider #dots span.dot:hover {
-  background-color: black;
+input[type="radio"]:checked + label[for^="dot"] {
+  background-color: rgb(56, 56, 56);
 }
