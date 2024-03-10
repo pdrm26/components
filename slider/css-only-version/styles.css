@@ -1,1 +1,17 @@
 @import url("../styles.css");
+
+input#dot-1:checked ~ #images {
+  transform: translateX(-0%);
+}
+
+input#dot-2:checked ~ #images {
+  transform: translateX(-100%);
+}
+
+input#dot-3:checked ~ #images {
+  transform: translateX(-200%);
+}
+
+input#dot-4:checked ~ #images {
+  transform: translateX(-300%);
+}

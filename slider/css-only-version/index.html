@@ -7,41 +7,20 @@
   </head>
   <body>
     <section id="slider">
-      <div id="images"></div>
-      <div id="dots"></div>
+      <input type="radio" name="dots" id="dot-1" hidden />
+      <label for="dot-1" class="dot"></label>
+      <input type="radio" name="dots" id="dot-2" hidden />
+      <label for="dot-2" class="dot"></label>
+      <input type="radio" name="dots" id="dot-3" hidden />
+      <label for="dot-3" class="dot"></label>
+      <input type="radio" name="dots" id="dot-4" hidden />
+      <label for="dot-4" class="dot"></label>
+      <ul id="images">
+        <img src="../61CiqVTRBEL._SX3000_.jpg" alt="" />
+        <img src="../61zAjw4bqPL._SX3000_.jpg" alt="" />
+        <img src="../71Ie3JXGfVL._SX3000_.jpg" alt="" />
+        <img src="../81KkrQWEHIL._SX3000_.jpg" alt="" />
+      </ul>
     </section>
-    <script>
-      const SLIDER_IMAGES = [
-        "../61CiqVTRBEL._SX3000_.jpg",
-        "../61zAjw4bqPL._SX3000_.jpg",
-        "../71Ie3JXGfVL._SX3000_.jpg",
-        "../81KkrQWEHIL._SX3000_.jpg",
-      ];
-
-      // Get the images and dots wrapper
-      const images = document.querySelector("#images");
-      const dots = document.querySelector("#dots");
-
-      // Generate images
-      SLIDER_IMAGES.forEach((image) => images.insertAdjacentHTML("afterbegin", `<img src=${image} />`));
-
-      // Generate dots
-      for (let i = 0; i < SLIDER_IMAGES.length; i++) {
-        dots.insertAdjacentHTML(
-          "beforeend",
-          `
-          <input type="radio" name="dot" id="dot${i}" data-slide-num=${i} hidden>
-          <label for="dot${i}" class="dot"></label>
-          `
-        );
-      }
-
-      dots.addEventListener("click", (e) => {
-        if (e.target.nodeName !== "INPUT") return;
-
-        const slideNumber = e.target.dataset.slideNum;
-        images.style.transform = `translateX(-${slideNumber * 100}%)`;
-      });
-    </script>
   </body>
 </html>

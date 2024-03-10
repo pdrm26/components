@@ -38,7 +38,7 @@ body {
   margin-top: 10px;
 }
 
-#slider #dots label.dot {
+#slider label.dot {
   display: inline-block;
   margin: 0 5px;
   width: 10px;
