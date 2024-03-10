@@ -38,7 +38,7 @@ body {
   margin-top: 10px;
 }
 
-#slider #dots input[type="radio"].dot {
+#slider #dots label.dot {
   display: inline-block;
   margin: 0 5px;
   width: 10px;
