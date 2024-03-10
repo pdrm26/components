@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <section id="slider">
+      <div id="images"></div>
+      <div id="dots"></div>
+    </section>
+    <script>
+      const SLIDER_IMAGES = [
+        "./61CiqVTRBEL._SX3000_.jpg",
+        "./61zAjw4bqPL._SX3000_.jpg",
+        "./71Ie3JXGfVL._SX3000_.jpg",
+        "./81KkrQWEHIL._SX3000_.jpg",
+      ];
+
+      // Get the images and dots wrapper
+      const images = document.querySelector("#images");
+      const dots = document.querySelector("#dots");
+
+      // Generate images
+      SLIDER_IMAGES.forEach((image) => images.insertAdjacentHTML("afterbegin", `<img src=${image} />`));
+
+      // Generate dots
+      for (let i = 0; i < SLIDER_IMAGES.length; i++) {
+        dots.insertAdjacentHTML(
+          "beforeend",
+          `<label for="dot${i}" class="dot"><input type="radio" name="dot" id="dot${i}" data-slide-num=${i}></label>`
+        );
+      }
+
+      dots.addEventListener("click", (e) => {
+        if (e.target.nodeName !== "INPUT") return;
+
+        
+        const slideNumber = e.target.dataset.slideNum;
+        images.style.transform = `translateX(-${slideNumber * 100}%)`;
+      });
+    </script>
+  </body>
+</html>
