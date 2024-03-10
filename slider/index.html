@@ -27,11 +27,11 @@
 
       // Generate dots
       for (let i = 0; i < SLIDER_IMAGES.length; i++) {
-        dots.insertAdjacentHTML("beforeend", `<span class="dot" data-slide-num=${i}></span>`);
+        dots.insertAdjacentHTML("beforeend", `<input type="radio" name="dot" class="dot" data-slide-num=${i}></input>`);
       }
 
       dots.addEventListener("click", (e) => {
-        if (e.target.nodeName !== "SPAN") return;
+        if (e.target.nodeName !== "INPUT") return;
 
         const slideNumber = e.target.dataset.slideNum;
         images.style.transform = `translateX(-${slideNumber * 100}%)`;
