@@ -9,42 +9,38 @@
     <section id="count-up">
       <div id="number-of-members">
         <h3>Members:</h3>
-        <p>0</p>
+        <p data-count="1200">0</p>
       </div>
       <div id="number-of-active-members">
         <h3>Active Members:</h3>
-        <p>0</p>
+        <p data-count="900">0</p>
       </div>
       <div id="number-of-deals">
         <h3>Deals:</h3>
-        <p>0</p>
+        <p data-count="5000">0</p>
       </div>
     </section>
     <script>
-      const numberOfMembers = 1200;
       const numberOfMembersElem = document.querySelector("#number-of-members p");
-
-      const numberOfActiveMembers = 900;
       const numberOfActiveMembersElem = document.querySelector("#number-of-active-members p");
-
-      const numberOfDeals = 5000;
       const numberOfDealsElem = document.querySelector("#number-of-deals p");
 
-      function counter(countTo, elem) {
+      function counter(elem) {
         let counter = 0;
+        const countTo = elem.getAttribute("data-count");
         const numIntervalId = setInterval(() => {
           counter = counter + 20;
           elem.textContent = counter;
 
-          if (counter === countTo) {
+          if (counter === Number(countTo)) {
             clearInterval(numIntervalId);
           }
         }, 20);
       }
 
-      counter(numberOfMembers, numberOfMembersElem);
-      counter(numberOfActiveMembers, numberOfActiveMembersElem);
-      counter(numberOfDeals, numberOfDealsElem);
+      counter(numberOfMembersElem);
+      counter(numberOfActiveMembersElem);
+      counter(numberOfDealsElem);
     </script>
   </body>
 </html>
