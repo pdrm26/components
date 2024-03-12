@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#count-up {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(228, 228, 228);
+  width: 100%;
+  padding: 50px 0;
+}
+
+section#count-up div[id^="number"] {
+  text-align: center;
+}
+
+section#count-up div[id^="number"] p {
+  margin: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
