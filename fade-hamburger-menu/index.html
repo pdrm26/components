@@ -6,10 +6,33 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <section id="menues">
+      <h1 style="width: 50%">
+        <q>
+          I have a dream that my four little children will one day live in a nation where they will not be judged by the
+          color of their skin but by the content of their character.</q
+        >
+        <br />
+        <span><i>Martin Luther King</i></span>
+      </h1>
+    </section>
+    <img src="./hamburger.png" alt="hamburger-menu" id="hamburger-menu" />
+    <img src="./close-48.png" alt="close-icon" id="close-icon" />
     <h1>
       <q> The only way to do great work is to love what you do. </q>
       <br />
       <span><i>Steve Jobs</i></span>
     </h1>
+    <script>
+      const hamburgerMenu = document.querySelector("img#hamburger-menu");
+      const closeIcon = document.querySelector("img#close-icon");
+      const menues = document.querySelector("#menues");
+      hamburgerMenu.addEventListener("click", (e) => {
+        menues.classList.add("active");
+      });
+      closeIcon.addEventListener("click", (e) => {
+        menues.classList.remove("active");
+      });
+    </script>
   </body>
 </html>
