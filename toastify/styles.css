@@ -1,0 +1,26 @@
+button {
+  font-size: larger;
+}
+
+.toast p {
+  padding: 10px;
+}
+
+.toast-success {
+  background-color: rgb(88, 190, 85);
+  max-width: 300px;
+  transform: translateX(-600px);
+  transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.toast.toast-success.active {
+  transform: translateX(10px);
+}
+
+.toast #time-bar {
+  transition: transform 0.01s linear;
+  background-color: red;
+  width: 100%;
+  height: 4px;
+  display: block;
+}

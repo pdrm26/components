@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <button id="cat">Click</button>
+    <section class="toast toast-success">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <span id="time-bar"></span>
+    </section>
+    <script>
+      const btnCat = document.querySelector("#cat");
+      const toastBox = document.querySelector(".toast.toast-success");
+      const timeBar = document.querySelector(".toast #time-bar");
+
+      btnCat.addEventListener("click", () => {
+        let timeBarWidth = 100;
+        const timeBarReducer = setInterval(() => {
+          if (timeBarWidth <= 0) clearInterval(timeBarReducer);
+          else {
+            timeBarWidth -= 1;
+            timeBar.style.width = timeBarWidth + "%";
+          }
+        }, 10);
+
+        toastBox.classList.add("active");
+        setTimeout(() => {
+          toastBox.classList.remove("active");
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>
