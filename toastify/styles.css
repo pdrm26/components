@@ -2,13 +2,16 @@ button {
   font-size: larger;
 }
 
-.toast p {
-  padding: 10px;
+.toast {
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  padding: 5px 10px;
+  max-width: 300px;
 }
 
 .toast-success {
   background-color: rgb(88, 190, 85);
-  max-width: 300px;
   transform: translateX(-600px);
   transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
