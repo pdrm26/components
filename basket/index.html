@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <nav id="header">
+        <ul>
+          <li id="brand-logo">
+            <img src="./amazon-logo.png" alt="amazon logo" />
+          </li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <section id="shopping-card">
+          <img src="./shopping-cart-icon.gif" alt="shopping-card" />
+          <span id="counter">0</span>
+        </section>
+      </nav>
+      <section id="merchant-cards-wrapper">
+        <div class="card">
+          <div class="img-container">
+            <img src="./airbods.webp" alt="airbods" />
+          </div>
+          <div class="desc-container">
+            <p class="desc">Airbods pro</p>
+            <p class="price">270$</p>
+          </div>
+          <button class="add-to-card">Add to Card</button>
+        </div>
+        <div class="card">
+          <div class="img-container">
+            <img src="./macbook.webp" alt="macbook" />
+          </div>
+          <div class="desc-container">
+            <p class="desc">Laptop macbookpro m3 256gb 16gb</p>
+            <p class="price">1200$</p>
+          </div>
+          <button class="add-to-card">Add to Card</button>
+        </div>
+        <div class="card">
+          <div class="img-container">
+            <img src="./iphone.webp" alt="iphone" />
+          </div>
+          <div class="desc-container">
+            <p class="desc">Iphone 256gb</p>
+            <p class="price">1100$</p>
+          </div>
+          <button class="add-to-card">Add to Card</button>
+        </div>
+      </section>
+    </div>
+    <script>
+      const addToCartBtns = document.querySelectorAll(".add-to-card");
+      const merchantsCounter = document.querySelector("#shopping-card #counter");
+
+      const updateTheMerchantsCounter = () => {
+        const merchantsItem = localStorage.getItem("merchants");
+        if (merchantsItem) {
+          const merchantsBuyer = JSON.parse(localStorage.getItem("merchants"));
+          merchantsCounter.textContent = merchantsBuyer.length;
+        } else {
+          merchantsCounter.textContent = 0;
+        }
+      };
+
+      updateTheMerchantsCounter();
+      const saveToLocalStorage = (merchantObj) => {
+        const merchantsItem = localStorage.getItem("merchants");
+        if (merchantsItem) {
+          const merchants = JSON.parse(localStorage.getItem("merchants"));
+          localStorage.setItem("merchants", JSON.stringify([...merchants, merchantObj]));
+        } else {
+          localStorage.setItem("merchants", JSON.stringify([merchantObj]));
+        }
+      };
+
+      addToCartBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // Get the closest .card element
+          const cardElement = btn.closest("div.card");
+
+          // Get the description and price elements within the .card element
+          const descriptionElementContent = cardElement.querySelector("p.desc").textContent;
+          const priceElementContent = cardElement.querySelector("p.price").textContent;
+
+          saveToLocalStorage({ merchant: descriptionElementContent, price: priceElementContent });
+          updateTheMerchantsCounter();
+        });
+      });
+    </script>
+  </body>
+</html>
